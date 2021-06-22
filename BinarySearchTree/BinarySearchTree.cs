@@ -106,7 +106,7 @@ namespace BinarySearchTree
         }
 
         /// <summary>
-        /// Returns an enumerator that iterates through the binary search tree
+        /// Returns an enumerator.
         /// </summary>
         /// <returns>enumerator that iterates</returns>
         public IEnumerator<T> GetEnumerator()
@@ -115,7 +115,7 @@ namespace BinarySearchTree
         }
 
         /// <summary>
-        /// Returns an enumerator that iterates through the binary search tree
+        /// Returns an enumerator.
         /// </summary>
         /// <returns>enumerator that iterates</returns>
         IEnumerator IEnumerable.GetEnumerator()
@@ -123,7 +123,13 @@ namespace BinarySearchTree
             return GetEnumerator();
         }
 
-        #region Private methods
+
+        /// <summary>
+        /// Method Insert.
+        /// </summary>
+        /// <param name="node">node.</param>
+        /// <param name="value">value.</param>
+        /// <returns></returns>
         private Node<T> Insert(Node<T> node, T value)
         {
             if (node == null)
@@ -146,6 +152,12 @@ namespace BinarySearchTree
             return node;
         }
 
+        /// <summary>
+        /// Method Contain
+        /// </summary>
+        /// <param name="node">node.</param>
+        /// <param name="value">value.</param>
+        /// <returns></returns>
         private bool Contains(Node<T> node, T value)
         {
             if (node == null)
@@ -232,8 +244,9 @@ namespace BinarySearchTree
             yield return node.Value;
         }
 
-        #endregion
-
+        /// <summary>
+        /// Node.
+        /// </summary>
         private class Node<T>
         {
             public Node(T value)
