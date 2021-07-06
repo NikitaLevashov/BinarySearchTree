@@ -123,7 +123,6 @@ namespace BinarySearchTree
             return GetEnumerator();
         }
 
-
         /// <summary>
         /// Method Insert.
         /// </summary>
